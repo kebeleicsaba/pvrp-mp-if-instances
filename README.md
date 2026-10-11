@@ -20,13 +20,10 @@ taverna_horizon_6_random/
 
 Each folder contains the 40 original instances with the period length $|P|$ given in its name. For example, `adapted_Milano_020_4_0.geojson` is adapted from `Milano_020_4_0.geojson`.
 
-## Adaptation
-
-Every instance has $N_P = |P|$ periods, $\delta = 1$ and $\Delta = |P| + 1$.
 The balanced and random versions of an instance differ only in the preferred days of the customers:
 
-- **balanced**: in id order, customers receive the days $1, 2, \dots, |P|, 1, 2, \dots$ in turn.
-- **random**: each customer receives a day drawn uniformly from $\{1, \dots, |P|\}$ (Python `random` with seed 42, files in alphabetical order, $|P| = 4$ first).
+- **balanced**: preferred days cycle through all days in customer ID order.
+- **random**: preferred days are chosen uniformly at random using seed 42 (files are processed alphabetically, with the four-day horizon first).
 
 ## Format
 
