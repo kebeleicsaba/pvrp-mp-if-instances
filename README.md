@@ -26,11 +26,11 @@ Every instance has $N_P = |P|$ periods, $\delta = 1$ and $\Delta = |P| + 1$.
 The balanced and random versions of an instance differ only in the preferred days of the customers:
 
 - **balanced**: in id order, customers receive the days $1, 2, \dots, |P|, 1, 2, \dots$ in turn.
-- **random**: each customer receives a day drawn uniformly from $\{1, \dots, |P|\}$ (Python `random`, seed 42; files in alphabetical order, $|P| = 4$ first).
+- **random**: each customer receives a day drawn uniformly from $\{1, \dots, |P|\}$ (Python `random` with seed 42, files in alphabetical order, $|P| = 4$ first).
 
 ## Format
 
-The files keep the original GeoJSON format; `...` marks unchanged original content.
+The files keep the original GeoJSON format. `...` marks unchanged original content.
 
 ```json
 {
@@ -58,5 +58,4 @@ The files keep the original GeoJSON format; `...` marks unchanged original conte
 | `info.max_time` | $\Delta$ | maximum number of days between two consecutive visits |
 | `properties.preferred_day` | $R_i$ | preferred day of customer $i$ in each period (0 for the depot, unused) |
 
-
-
+*Note: Each customer is served exactly once per period, so the original `frequency` and `totDemand` fields are not used.*
