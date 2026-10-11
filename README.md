@@ -8,3 +8,55 @@ The instances are adapted from the PVRP-IF waste-collection instances of [Tavern
 This repository contains the adapted literature benchmark instances (referred to as the *Taverna instances*) used in the paper:
 
 > Kebelei, C., & Dávid, B. A periodic vehicle routing problem for waste collection with preferred pickup days and multiple service periods. *Manuscript under review.*
+
+## Repository structure
+
+```
+taverna_horizon_4_balanced/
+taverna_horizon_4_random/
+taverna_horizon_6_balanced/
+taverna_horizon_6_random/
+```
+
+Each folder contains the 40 original instances with the period length $|P|$ given in its name. For example, `adapted_Milano_020_4_0.geojson` is adapted from `Milano_020_4_0.geojson`.
+
+## Adaptation
+
+Every instance has $N_P = |P|$ periods, $\delta = 1$ and $\Delta = |P| + 1$.
+The balanced and random versions of an instance differ only in the preferred days of the customers:
+
+- **balanced**: in id order, customers receive the days $1, 2, \dots, |P|, 1, 2, \dots$ in turn.
+- **random**: each customer receives a day drawn uniformly from $\{1, \dots, |P|\}$ (Python `random`, seed 42; files in alphabetical order, $|P| = 4$ first).
+
+## Format
+
+The files keep the original GeoJSON format; `...` marks unchanged original content.
+
+```json
+{
+  "type": "FeatureCollection",
+  "info": {
+    ...,
+    "planningHorizon": 4,
+    "number_of_service_periods": 4,
+    "deviation": 1,
+    "max_time": 5
+  },
+  "features": [
+    { ..., "properties": { "id": 1, "type": "customer", ..., "preferred_day": 1 } },
+    ...
+  ],
+  "duration": [[...], ...]
+}
+```
+
+| Key | Notation | Meaning |
+|---|:---:|---|
+| `info.planningHorizon` | $\lvert P\rvert$ | days per period |
+| `info.number_of_service_periods` | $N_P$ | number of periods |
+| `info.deviation` | $\delta$ | maximum deviation from the preferred day (days) |
+| `info.max_time` | $\Delta$ | maximum number of days between two consecutive visits |
+| `properties.preferred_day` | $R_i$ | preferred day of customer $i$ in each period (0 for the depot, unused) |
+
+
+
