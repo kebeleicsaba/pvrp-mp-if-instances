@@ -30,8 +30,7 @@
                 "type": "depot",
                 "frequency": 0.0,
                 "demand": 0.0,
-                "service": 0.0,
-                "preferred_day": 0
+                "service": 0.0
             },
             "geometry": {
                 "type": "Point",

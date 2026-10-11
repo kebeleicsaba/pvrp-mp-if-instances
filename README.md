@@ -43,7 +43,7 @@ The files keep the original GeoJSON format. `...` marks unchanged original conte
     "max_time": 5
   },
   "features": [
-    { ..., "properties": { "id": 0, "type": "depot", ..., "preferred_day": 0 } },
+    { ..., "properties": { "id": 0, "type": "depot", ... } },
     { ..., "properties": { "id": 1, "type": "customer", ..., "preferred_day": 1 } },
     ...
     { ..., "properties": { "id": 22, "type": "intermediateFacility", ... } }
@@ -58,6 +58,6 @@ The files keep the original GeoJSON format. `...` marks unchanged original conte
 | `info.number_of_service_periods` | $N_P$ | number of periods |
 | `info.deviation` | $\delta$ | maximum deviation from the preferred day (days) |
 | `info.max_time` | $\Delta$ | maximum number of days between two consecutive visits |
-| `properties.preferred_day` | $R_i$ | preferred day of customer $i$ in each period (0 for the depot, unused) |
+| `properties.preferred_day` | $R_i$ | preferred day of customer $i$ in each period |
 
 *Note: Each customer is served exactly once per period, so the original `frequency` and `totDemand` fields are not used.*
