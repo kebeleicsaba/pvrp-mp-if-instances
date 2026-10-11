@@ -32,7 +32,7 @@ The balanced and random versions of an instance differ only in the preferred day
 
 The files keep the original GeoJSON format. `...` marks unchanged original content.
 
-```json
+```js
 {
   "type": "FeatureCollection",
   "info": {
@@ -43,8 +43,10 @@ The files keep the original GeoJSON format. `...` marks unchanged original conte
     "max_time": 5
   },
   "features": [
+    { ..., "properties": { "id": 0, "type": "depot", ..., "preferred_day": 0 } },
     { ..., "properties": { "id": 1, "type": "customer", ..., "preferred_day": 1 } },
     ...
+    { ..., "properties": { "id": 22, "type": "intermediateFacility", ... } }
   ],
   "duration": [[...], ...]
 }
