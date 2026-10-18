@@ -16,16 +16,19 @@ taverna_horizon_4_balanced/
 taverna_horizon_4_random/
 taverna_horizon_6_balanced/
 taverna_horizon_6_random/
+experiment_subsets/
 ```
 
-Each folder contains the 40 original instances with the period length $|P|$ given in its name. For example, `adapted_Milano_020_4_0.geojson` is adapted from `Milano_020_4_0.geojson`.
+Each `taverna_*` folder contains the 40 original instances with the period length $|P|$ given in its name. For example, `adapted_Milano_020_4_0.geojson` is adapted from `Milano_020_4_0.geojson`.
 
 The balanced and random versions of an instance differ only in the preferred days of the customers:
 
 - **balanced**: preferred days cycle through all days in customer ID order.
 - **random**: preferred days are chosen uniformly at random using seed 42 (files are processed alphabetically, with the four-day horizon first).
 
-## Format
+The `experiment_subsets` folder lists the instances, penalty levels and solver seeds used in the parameter tuning (`parameter_tuning.csv`) and in the algorithmic component analysis (`component_analysis.csv`) of the paper.
+
+## Instance format
 
 The files keep the original GeoJSON format. `...` marks unchanged original content.
 
