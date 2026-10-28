@@ -1,0 +1,17 @@
+{
+  "upload_type": "dataset",
+  "access_right": "open",
+  "title": "PVRP-MP-IF benchmark instances adapted from Taverna and Tilk",
+  "creators": [
+    {"name": "Kebelei, Csaba", "affiliation": "Eötvös Loránd University"},
+    {"name": "Dávid, Balázs", "affiliation": "InnoRenew CoE, UP IAM and UP FAMNIT, University of Primorska"}
+  ],
+  "description": "Benchmark instances for the periodic vehicle routing problem with preferred pickup days, multiple service periods and intermediate facilities (PVRP-MP-IF), adapted from the PVRP-IF waste-collection instances of Taverna and Tilk (2026), together with the instance subsets used in the parameter tuning and in the algorithmic component analysis of the accompanying paper.",
+  "license": "mit",
+  "language": "eng",
+  "keywords": ["periodic vehicle routing", "waste collection", "preferred days", "intermediate facilities", "benchmark instances"],
+  "related_identifiers": [
+    {"identifier": "10.1016/j.ejor.2025.09.039", "relation": "isDerivedFrom", "scheme": "doi", "resource_type": "publication-article"},
+    {"identifier": "https://github.com/iolab-uniud/pvrpif-instances", "relation": "isDerivedFrom", "scheme": "url", "resource_type": "dataset"}
+  ]
+}
